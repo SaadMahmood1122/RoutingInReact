@@ -1,0 +1,13 @@
+// Outlet having child components on different routes in our application
+import { Outlet } from "react-router-dom";
+import MainNavigation from "./MainNavigation";
+function RootLayout() {
+  return (
+    <>
+      <MainNavigation />
+      <Outlet />
+    </>
+  );
+}
+
+export default RootLayout;
