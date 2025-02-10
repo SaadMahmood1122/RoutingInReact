@@ -19,7 +19,7 @@ function ProductPage() {
         {productsArr.map((prod) => {
           return (
             <li key={prod.id}>
-              <Link to={`/products/${prod.id}`}>{prod.iteam}</Link>
+              <Link to={prod.id}>{prod.iteam}</Link>
             </li>
           );
         })}
