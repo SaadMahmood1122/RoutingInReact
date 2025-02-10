@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+
+const productsArr = [
+  { id: "p1", iteam: "product-1" },
+  { id: "p2", iteam: "product-2" },
+  { id: "p3", iteam: "product-3" },
+];
 function ProductPage() {
   return (
     <>
@@ -10,10 +16,13 @@ function ProductPage() {
       </p>
 
       <ul>
-        <li>Product 1</li>
-        <li>Product 2</li>
-        <li>Product 3</li>
-        <li>Product 4</li>
+        {productsArr.map((prod) => {
+          return (
+            <li key={prod.id}>
+              <Link to={`/products/${prod.id}`}>{prod.iteam}</Link>
+            </li>
+          );
+        })}
       </ul>
     </>
   );
